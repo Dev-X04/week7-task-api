@@ -24,6 +24,9 @@ router.get('/', async (req, res, next) => {
   } catch (err) { next(err); }
 });
 
+router.get('/health', (req, res) => {
+    res.json({ status: 'ok' });
+});
 
 router.get('/:id', async (req, res, next) => {
   try {
